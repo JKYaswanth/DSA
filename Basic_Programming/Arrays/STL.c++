@@ -36,6 +36,15 @@ void input_vector(vector<int>&v,int n){ //For the input of the vector in a funct
     }
 }
 
+void print_2d_vector(vector<vector<int>>&v){
+    for(int i=0;i<v.size();i++){
+        for(int j=0;j<v[i].size();j++){
+            cout<<v[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+
 int main(){
 
     //STL(Standard Template Library):- Provides a collection of template functions that offer common data structures and algorithms to make programming more efficient and convenient.
@@ -108,11 +117,49 @@ int main(){
     //vector<int>v(v1);
 
     //Example printing vector :- Method 2
-    vector<int>v;
-    int n;
-    cout<<"Enter the size of the array :- ";
-    cin>>n;
-    input_vector(v,n);
-    print_vector_2(v);
+    // vector<int>v;
+    // int n;
+    // cout<<"Enter the size of the array :- ";
+    // cin>>n;
+    // input_vector(v,n);
+    // print_vector_2(v);
+    // return 0;
+
+    //v.empty :- gives a boolean value such that the array is empty or full
+
+    //2D vector :- vector<vector<int>> v
+
+    //realistic 2D array declaration :- vector<vector<int>>v(5,vector<int>(10,0));
+
+    //Explanation :- 2D array with the name v with 5 row and 10 column with each entry as 0
+
+    //Example :- 2D array declarationa and traversal
+
+    // vector<vector<int>>v(5,vector<int>(10,0));
+    // for(int i=0;i<v.size();i++){
+    //     for(int j=0;j<v[i].size();j++){
+    //         cout<<v[i][j]<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
+    //Example :- Jagged 2D array
+
+    vector<vector<int>>v;
+
+    vector<int>v1(5,1);
+    vector<int>v2(10,2);
+    vector<int>v3(8,3);
+    vector<int>v4(6,4);
+    vector<int>v5(2,5);
+
+    v.push_back(v1);
+    v.push_back(v2);
+    v.push_back(v3);
+    v.push_back(v4);
+    v.push_back(v5);
+
+    print_2d_vector(v);
+
     return 0;
 }
